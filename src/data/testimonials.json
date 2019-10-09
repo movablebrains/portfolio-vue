@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jim",
+    "location": "Los Altos, United States",
+    "review": "Nice job, knew just what to do. Thanks!",
+    "score": 5
+  },
+  {
+    "name": "Upwork Client",
+    "location": null,
+    "review": "Another great job. He's my go-to guy!",
+    "score": 5
+  },
+  {
+    "name": "Ron",
+    "location": "St. Peters, United States",
+    "review": "Look forward to working with him again in very near future",
+    "score": 5
+  },
+  {
+    "name": "Jane Oliveira",
+    "location": "Pensacola,  United States",
+    "review": "Highly skilled and professional developer. I will hire him again.",
+    "score": 5
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Email",
+    "url": "mailto:%61%63%6F%62%2E%72%6F%74%73%65%6E%40%68%6F%74%6D%61%69%6C%2E%63%6F%6D",
+    "title": "Get in Touch",
+    "icon": "envelope"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/webdevsuperfast",
+    "title": "Follow me on GitHub",
+    "icon": "github"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/acobrotsen",
+    "title": "Follow me on LinkedIn",
+    "icon": "linkedin"
+  },
+  {
+    "name": "WordPress",
+    "url": "https://profiles.wordpress.org/frodobean",
+    "title": "Rate me on WordPress",
+    "icon": "wordpress"
+  }
+]
