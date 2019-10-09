@@ -1,7 +1,7 @@
 <template>
-    <b-navbar toggleable="lg" type="dark" class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
-        <b-container>
-            <b-navbar-brand href="/"><img :src="`${publicPath}images/logo.svg`" alt="Rotsen Mark Acob" width="50"></b-navbar-brand>
+    <b-navbar toggleable="lg" type="dark" class="js-navbar-scroll fixed-top">
+        <b-container fluid>
+            <b-navbar-brand :href="`${publicPath}`"><img :src="`${publicPath}images/logo.svg`" alt="Rotsen Mark Acob" width="50"></b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav class="ml-auto mt-2 mt-lg-0">
