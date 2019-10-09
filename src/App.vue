@@ -2,6 +2,7 @@
   <div id="app">
     <Navigation />
     <Header />
+    <About />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 
 import Navigation from './components/Navigation.vue'
 import Header from './components/Header.vue'
+import About from './components/About.vue';
 
 export default {
   name: 'app',
@@ -18,7 +20,8 @@ export default {
   },
   components: {
     Navigation,
-    Header
+    Header,
+    About
   }
 }
 </script>
