@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navigation />
+    <Header />
+    <!-- <div>{{ myJson }}</div> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+import './assets/scss/style.scss';
+import Navigation from './components/Navigation.vue'
+import Header from './components/Header.vue'
+
+Vue.use(BootstrapVue)
+// import json from './data/navigation.json'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      // myJson: json
+    }
+  },
   components: {
-    HelloWorld
+    Navigation,
+    Header
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
