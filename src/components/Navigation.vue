@@ -1,9 +1,9 @@
 <template>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar toggleable="lg" type="dark" variant="info" class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav class="ml-auto" v-for="navigation in navigationList" :key="navigation.id">
-                <b-dropdown-item :href="navigation.href">{{ navigation.title }}</b-dropdown-item>
+            <b-navbar-nav class="ml-auto">
+                <b-nav-item v-for="navigation in navigationList" :key="navigation.title" :href="navigation.href">{{ navigation.title }}</b-nav-item>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
