@@ -17,6 +17,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.3",
     "core-js": "^2.6.5",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "stream": "htmlstreamofficial/stream-ui-kit",
     "vue": "^2.6.10"
   },
@@ -40,7 +42,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
