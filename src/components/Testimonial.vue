@@ -32,7 +32,7 @@ export default {
             publicPath: process.env.BASE_URL
         }
     },
-    mounted: function() {
+    mounted() {
 
     },
     methods: {
