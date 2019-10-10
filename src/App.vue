@@ -6,6 +6,9 @@
     <Experience />
     <Skills />
     <Portfolio />
+    <Testimonial />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -17,9 +20,16 @@ import About from './components/About.vue'
 import Experience from './components/Experience.vue'
 import Skills from './components/Skills.vue'
 import Portfolio from './components/Portfolio.vue'
+import Testimonial from './components/Testimonial.vue'
+import Footer from './components/Footer.vue'
+import Contact from './components/Contact.vue'
 
 export default {
   name: 'app',
+  metaInfo: {
+    title: 'Rotsen Acob',
+    titleTemplate: '%s - Web Developer'
+  },
   data() {
     return {
     }
@@ -30,7 +40,10 @@ export default {
     About,
     Experience,
     Portfolio,
-    Skills
+    Skills,
+    Testimonial,
+    Footer,
+    Contact
   }
 }
 </script>
