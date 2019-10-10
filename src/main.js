@@ -15,13 +15,11 @@ dom.watch()
 library.add(fas, fab)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-import './assets/scss/style.scss';
-
 import '../node_modules/jquery/dist/jquery'
-
 import '../node_modules/popper.js/dist/umd/popper'
-
 import '../node_modules/stream/assets/vendors/bootstrap/js/bootstrap'
+
+import './assets/scss/style.scss';
 
 // import '../node_modules/stream/assets/js/global';
 
