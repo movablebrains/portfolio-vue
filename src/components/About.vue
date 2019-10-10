@@ -4,7 +4,7 @@
             <b-row>
                 <b-col md="4" class="mx-auto">
                     <div class="u-pull-half text-center">
-                        <img class="img-fluid u-avatar u-box-shadow-lg rounded-circle mb-3" :src="`${publicPath}images/rotsen-acob.jpg`" width="200" height="200" />
+                        <img class="lazyload img-fluid u-avatar u-box-shadow-lg rounded-circle mb-3" :data-src="`${publicPath}images/rotsen-acob.jpg`" width="200" height="200" />
                     </div>
                 </b-col>
             </b-row>
