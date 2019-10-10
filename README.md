@@ -1,29 +1,29 @@
-# portfolio-vue
+# Portfolio Vue
 
-## Project setup
-```
-yarn install
-```
+## Introduction
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+This is the VueJS version of my [personal website](https://rotsenacob.com) which is currently based on Jekyll and Stream UI.
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## Building from Source
 
-### Run your tests
-```
-yarn run test
-```
+1. Install [Git](https://git-scm.com/).
+2. Clone the repository to your local machine.
+3. Install [Node](https://nodejs.org/en/).
+4. Install [Yarn](https://yarnpkg.org).
+5. Run `yarn install` to install dependencies through terminal/CLI program.
+6. Run `yarn run serve` through your favorite CLI program.
 
-### Lints and fixes files
-```
-yarn run lint
-```
+#
+I suggest using package manager to install Git, Node and Yarn. You can use [Homebrew](httsp://brew.sh) if you're on a Mac or Linux/WSL, [Scoop](https://scoop.sh) if you're on Windows.
+#
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Todos
+
+* Move static json files to Firebase.
+* Bug fixes and cleanup
+
+## Credits
+
+* [Stream UI Kit](https://htmlstream.com/templates/stream-ui-kit)
+* [Bootstrap Vue](https://bootstrap-vue.js.org/)
+* [Font Awesome Vue](https://github.com/FortAwesome/vue-fontawesome)
