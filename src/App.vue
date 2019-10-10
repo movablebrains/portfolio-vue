@@ -3,6 +3,7 @@
     <Navigation />
     <Header />
     <About />
+    <Border />
     <Experience />
     <Skills />
     <Portfolio />
@@ -23,8 +24,8 @@ import Portfolio from './components/Portfolio.vue'
 import Testimonial from './components/Testimonial.vue'
 import Footer from './components/Footer.vue'
 import Contact from './components/Contact.vue'
+import Border from './components/Border.vue'
 
-// import lazyload from 'vanilla-lazyload'
 import 'lazysizes'
 
 export default {
@@ -46,7 +47,8 @@ export default {
     Skills,
     Testimonial,
     Footer,
-    Contact
+    Contact,
+    Border
   }
 }
 </script>
