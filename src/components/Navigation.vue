@@ -14,7 +14,9 @@
 
 <script>
     // import axios from 'axios';
-    import json from '../data/navigation.json';
+    import json from '../data/navigation.json'
+    import smoothScroll from '../../node_modules/smooth-scroll/dist/smooth-scroll'
+
     export default {
         name: "Navigation",
         data() {
@@ -26,6 +28,11 @@
         },
         mounted: function() {
             // this.getNavigation();
+            // var scroll = new smoothScroll('a[href*="#"]');
+        },
+        created: function() {
+            var scroll = new smoothScroll('a[href*="#"]');
+            scroll;
         },
         methods: {
             // getNavigation: function() {
