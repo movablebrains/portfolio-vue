@@ -9,7 +9,7 @@
                 </b-col>
                 <b-col md="4" class="align-self-center">
                     <ul class="list-inline text-center text-md-right mb-0">
-                        <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" :title="socialMedia.title" v-for="(socialMedia, index) in socialList" :key="index">
+                        <li class="list-inline-item mx-2" v-for="(socialMedia, index) in socialList" :key="index">
                             <b-link :href="socialMedia.url" class="text-white" v-if="socialMedia.icon != 'envelope'">
                                     <font-awesome-icon :icon="['fab', `${socialMedia.icon}`]"></font-awesome-icon>
                                 </b-link>
