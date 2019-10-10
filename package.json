@@ -19,6 +19,7 @@
     "core-js": "^2.6.5",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "smooth-scroll": "^16.1.0",
     "stream": "htmlstreamofficial/stream-ui-kit",
     "vue": "^2.6.10",
     "vue-meta": "^2.3.1"
