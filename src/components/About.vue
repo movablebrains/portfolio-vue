@@ -1,5 +1,5 @@
 <template>
-    <section class="js-scroll-to-about">
+    <section id="js-scroll-to-about">
         <b-container>
             <b-row>
                 <b-col md="4" class="mx-auto">
