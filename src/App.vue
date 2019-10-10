@@ -24,6 +24,9 @@ import Testimonial from './components/Testimonial.vue'
 import Footer from './components/Footer.vue'
 import Contact from './components/Contact.vue'
 
+// import lazyload from 'vanilla-lazyload'
+import 'lazysizes'
+
 export default {
   name: 'app',
   metaInfo: {
@@ -47,8 +50,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-  .jumbotron {
-    border-radius: 0px;
-  }
-</style>
