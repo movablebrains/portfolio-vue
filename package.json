@@ -20,7 +20,8 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "stream": "htmlstreamofficial/stream-ui-kit",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-meta": "^2.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
