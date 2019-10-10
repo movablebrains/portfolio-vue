@@ -1,5 +1,47 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-@import '../../../node_modules/bootstrap-vue/src/index.scss';
+// @import '../../../node_modules/bootstrap-vue/src/index.scss';
 
+@import '../../../node_modules/stream/assets/include/scss/vendors/bootstrap/bootstrap.scss';
 @import '../../../node_modules/stream/assets/include/scss/styles.scss';
+
+@import '../../../node_modules/magnific-popup/src/css/main.scss';
+
+// Magnific Popup
+.mfp-title.mfp-title {
+    a {
+        color: #fff;
+        font-size: 12px;
+    }
+}
+
+// Mixitup
+.mixitup-control-active {
+    @extend .active;
+}
+
+// Programming Languages
+.programming-languages {
+    li {
+        @extend .text-muted;
+        &:hover {
+            @extend .text-primary;
+            cursor: pointer;
+        }
+    }
+}
+
+// Jumbotron
+.jumbotron {
+    border-radius: 0px;
+}
+
+// Lazysizes
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
