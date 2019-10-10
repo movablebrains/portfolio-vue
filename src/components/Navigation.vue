@@ -7,6 +7,11 @@
                 <b-navbar-nav class="ml-auto mt-2 mt-lg-0">
                     <b-nav-item class="mr-4 mb-2 mb-lg-0" v-for="navigation in navigationList" :key="navigation.title" :href="navigation.href">{{ navigation.title }}</b-nav-item>
                 </b-navbar-nav>
+                <div>
+                    <a class="btn btn-primary" href="#js-scroll-to-contact">
+                        <font-awesome-icon :icon="['fas', 'envelope']" class="mr-1"></font-awesome-icon> Contact Me
+                    </a>
+                </div>
             </b-collapse>
         </b-container>
     </b-navbar>
@@ -15,7 +20,7 @@
 <script>
     // import axios from 'axios';
     import json from '../data/navigation.json'
-    import smoothScroll from '../../node_modules/smooth-scroll/dist/smooth-scroll'
+    import smoothScroll from 'smooth-scroll'
 
     export default {
         name: "Navigation",
@@ -32,7 +37,6 @@
         },
         created: function() {
             var scroll = new smoothScroll('a[href*="#"]');
-            scroll;
         },
         methods: {
             // getNavigation: function() {
