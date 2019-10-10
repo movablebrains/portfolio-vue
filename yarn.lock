@@ -5091,6 +5091,11 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
+lazysizes@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.1.2.tgz#1baf41b8f3f2aef1054120e41c6efd0e83d417a3"
+  integrity sha512-j9hQgryLCwQ0EGRr282RS6h3UHLbJnbaS/VfrADOvduhfnFpmcsdPVygdWrlu1hsYgKTjhOiLCVI75RKd3fsvg==
+
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
@@ -5357,6 +5362,11 @@ lru-cache@^5.1.1:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
+
+magnific-popup@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.1.0.tgz#3e7362c5bd18f6785fe99e59d013e20af33d3049"
+  integrity sha1-PnNixb0Y9nhf6Z5Z0BPiCvM9MEk=
 
 make-dir@^1.0.0:
   version "1.3.0"
@@ -5649,6 +5659,11 @@ mixin-deep@^1.2.0:
   dependencies:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
+
+mixitup@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/mixitup/-/mixitup-3.3.1.tgz#6ca9b6fc3a202d237b8f3ce9c02f48ac976881f6"
+  integrity sha512-5WlMzRNSAU5R1N/NlmOvmYxcZVgib3do5I0H+LO6e0ArI7GlNLMPoAANK7XOemuwJFZcJHIGvWDIPMK1jnWEqA==
 
 mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.1"
@@ -8660,6 +8675,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanilla-lazyload@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-12.1.0.tgz#b38b7bd6afd06b03287d0da633f5f87ff0256ce9"
+  integrity sha512-qZGPmpuBmNQXOzmF3ufvuU/MbM9a6XToGoQi5G4KmYFKD6ErUO3HTq3aBBcMIFZqqRJaz46yc6ax5syJTXjDJA==
 
 vary@~1.1.2:
   version "1.1.2"
