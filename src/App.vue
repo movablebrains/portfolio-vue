@@ -3,6 +3,9 @@
     <Navigation />
     <Header />
     <About />
+    <Experience />
+    <Skills />
+    <Portfolio />
   </div>
 </template>
 
@@ -10,7 +13,10 @@
 
 import Navigation from './components/Navigation.vue'
 import Header from './components/Header.vue'
-import About from './components/About.vue';
+import About from './components/About.vue'
+import Experience from './components/Experience.vue'
+import Skills from './components/Skills.vue'
+import Portfolio from './components/Portfolio.vue'
 
 export default {
   name: 'app',
@@ -21,7 +27,10 @@ export default {
   components: {
     Navigation,
     Header,
-    About
+    About,
+    Experience,
+    Portfolio,
+    Skills
   }
 }
 </script>
