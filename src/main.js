@@ -21,11 +21,12 @@ library.add(fas, fab)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // import '../node_modules/jquery/dist/jquery'
-import '../jquery-global.js'
+import '../jquery-global'
 import '../node_modules/popper.js/dist/umd/popper'
 import '../node_modules/stream/assets/vendors/bootstrap/js/bootstrap'
 import '../node_modules/stream/assets/vendors/jquery.parallax'
-import '../node_modules/stream/assets/js/global';
+import '../node_modules/stream/assets/js/vendors/parallax'
+require('./assets/js/custom.js')
 
 import './assets/scss/style.scss';
 
