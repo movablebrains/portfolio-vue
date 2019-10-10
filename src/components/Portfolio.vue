@@ -16,7 +16,7 @@
             </ul>
             <b-row class="collections gallery u-portfolio no-gutters mb-6">
                 <figure v-for="(portfolio, index) in portfolioList" :key="index" :class="['mix col-sm-6 col-md-4 u-portfolio__item', `${Array.isArray(portfolio.category) ? portfolio.category.join(' ') : portfolio.category}`]">
-                    <img class="u-portfolio__image lazyload" :src="`${publicPath}images/thumbs/${portfolio.thumbnail}`" :alt="`${portfolio.title}`">
+                    <img class="u-portfolio__image lazyload" :data-src="`${publicPath}images/thumbs/${portfolio.thumbnail}`" :alt="`${portfolio.title}`">
                     <figcaption class="u-portfolio__info">
                         <h6 class="mb-0">{{ portfolio.title }}</h6>
                         <small class="d-block">{{ Array.isArray(portfolio.category) ? portfolio.category.join(', ').toUpperCase() : `${portfolio.category.toUpperCase()}` }}</small>
@@ -30,6 +30,8 @@
 
 <script>
 import json from '../data/portfolio.json'
+import mixitup from 'mixitup'
+import magnificPopup from 'magnific-popup'
 
 export default {
     name: "Portfolio",
@@ -39,10 +41,39 @@ export default {
             publicPath: process.env.BASE_URL
         }
     },
-    mounted: function() {
+    mounted() {
+        var containerEl = document.querySelector('.collections');
+        var mixer = mixitup(containerEl, {
+            callbacks: {
+                onMixStart: function(state,futureState){
+                }
+            }
+        });
 
-    },
-    methods: {
+        // Magnific Popup
+        $(document).ready(function(){
+            $('.gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function(item) {
+                        if ( item.el.data("url") ) {
+                            return '<a target="_blank" href="'+item.el.data("url")+'">Visit Site</a>';
+                        } else {
+                            return '';
+                        }
+                    }
+                }
+            });
+        });
     }
 }
 </script>
