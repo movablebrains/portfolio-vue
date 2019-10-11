@@ -19,7 +19,7 @@
                     <img class="u-portfolio__image lazyload" :data-src="`${publicPath}images/thumbs/${portfolio.thumbnail}`" :alt="`${portfolio.title}`">
                     <figcaption class="u-portfolio__info">
                         <h6 class="mb-0">{{ portfolio.title }}</h6>
-                        <small class="d-block">{{ Array.isArray(portfolio.category) ? portfolio.category.join(', ').toUpperCase() : `${portfolio.category.toUpperCase()}` }}</small>
+                        <small class="d-block">{{ Array.isArray(portfolio.category) ? portfolio.category.join(', ') : `${portfolio.category}` | uppercase(true)}}</small>
                     </figcaption>
                     <a class="u-portfolio__zoom" :href="`${publicPath}images/${portfolio.image}`" :title="`${ portfolio.title }`" :data-url="`${ portfolio.website }`">Zoom</a>
                 </figure>
@@ -39,6 +39,21 @@ export default {
         return {
             portfolioList: json,
             publicPath: process.env.BASE_URL
+        }
+    },
+    filters: {
+        uppercase: function(value, onlyFirstCharacter) {
+            if (!value) {
+                return '';
+            }
+        
+            value = value.toString();
+        
+            if (onlyFirstCharacter) {
+                return value.charAt(0).toUpperCase() + value.slice(1);
+            } else {
+                return value.toUpperCase();
+            }
         }
     },
     mounted() {
