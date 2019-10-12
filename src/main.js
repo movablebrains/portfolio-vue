@@ -6,6 +6,19 @@ Vue.use(VueMeta, {
   refreshOnceNavigation: true
 })
 
+import NotFound from './components/404.vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: "history",
+  routes: [
+    { path: '/'},
+    { path: '*', component: NotFound }
+  ]
+})
+
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 
@@ -33,5 +46,6 @@ import './assets/scss/style.scss';
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
