@@ -36,7 +36,9 @@
             // var scroll = new smoothScroll('a[href*="#"]');
         },
         created: function() {
+            /* eslint-disable no-unused-vars */
             var scroll = new smoothScroll('a[href*="#"]');
+            /* eslint-enable no-unused-vars */
         },
         methods: {
             // getNavigation: function() {
