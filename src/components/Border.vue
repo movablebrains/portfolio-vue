@@ -1,5 +1,5 @@
 <template>
-    <b-container class="container">
+    <b-container>
         <hr class="my-0">
     </b-container>
 </template>
