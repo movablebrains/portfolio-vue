@@ -19,7 +19,22 @@
                     <img class="u-portfolio__image lazyload" :data-src="`${publicPath}images/thumbs/${portfolio.thumbnail}`" :alt="`${portfolio.title}`">
                     <figcaption class="u-portfolio__info">
                         <h6 class="mb-0">{{ portfolio.title }}</h6>
-                        <small class="d-block">{{ Array.isArray(portfolio.category) ? portfolio.category.join(', ') : `${portfolio.category}` | uppercase(true)}}</small>
+                        <small class="d-block">
+                            <template v-if="Array.isArray(portfolio.category)">
+                                <template v-for="(category, index) in portfolio.category">
+                                    {{ category == 'wordpress' ? 'WordPress' : category | uppercase(true) }}<template v-if="index != (portfolio.category.length - 1)">, </template>
+                                </template>
+                            </template>
+                            <template v-else-if="portfolio.category == 'wordpress'">
+                                WordPress
+                            </template>
+                            <template v-else-if="portfolio.category == 'html'">
+                                HTML
+                            </template>
+                            <template v-else>
+                                {{portfolio.category | uppercase(true)}}
+                            </template>
+                        </small>
                     </figcaption>
                     <a class="u-portfolio__zoom" :href="`${publicPath}images/${portfolio.image}`" :title="`${ portfolio.title }`" :data-url="`${ portfolio.website }`">Zoom</a>
                 </figure>
