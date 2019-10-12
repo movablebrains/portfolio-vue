@@ -46,7 +46,9 @@
 <script>
 import json from '../data/portfolio.json'
 import mixitup from 'mixitup'
+/* eslint-disable no-unused-vars */
 import magnificPopup from 'magnific-popup'
+/* eslint-enable no-unused-vars */
 
 export default {
     name: "Portfolio",
@@ -72,6 +74,7 @@ export default {
         }
     },
     mounted() {
+        /* eslint-disable no-unused-vars */
         var containerEl = document.querySelector('.collections');
         var mixer = mixitup(containerEl, {
             callbacks: {
@@ -104,6 +107,7 @@ export default {
                 }
             });
         });
+        /* eslint-enable no-unused-vars */
     }
 }
 </script>
