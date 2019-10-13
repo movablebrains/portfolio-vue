@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the VueJS version of the previous design of my [personal website](https://rotsenacob.com) which is based on Jekyll and Stream UI.
+This is the VueJS version of the previous design of my [personal website](https://webdevsuperfast.netlify.com/) which is based on Jekyll and Stream UI.
 
 ## Building from Source
 
