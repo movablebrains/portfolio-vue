@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the VueJS version of my [personal website](https://rotsenacob.com) which is currently based on Jekyll and Stream UI.
+This is the VueJS version of the previous design of my [personal website](https://rotsenacob.com) which is based on Jekyll and Stream UI.
 
 ## Building from Source
 
@@ -13,12 +13,11 @@ This is the VueJS version of my [personal website](https://rotsenacob.com) which
 5. Run `yarn install` to install dependencies through terminal/CLI program.
 6. Run `yarn run serve` through your favorite CLI program.
 
- **Note:** I suggest using package manager to install Git, Node and Yarn. You can use [Homebrew](httsp://brew.sh) if you're on a Mac or Linux/WSL, [Scoop](https://scoop.sh) if you're on Windows.
+ **Note:** I suggest using package manager to install Git, Node and Yarn. You can use [Homebrew](https://brew.sh) if you're on a Mac or Linux/WSL, [Scoop](https://scoop.sh) if you're on Windows.
 
 
 ## Todos
 
-* Move static json files to Firebase.
 * Bug fixes and cleanup
 
 ## Credits
