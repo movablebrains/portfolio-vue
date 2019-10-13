@@ -27,7 +27,6 @@
         data() {
             return {
                 navigationList: json,
-                baseUrl: process.env.VUE_APP_BASE_URL,
                 publicPath: process.env.BASE_URL
             }
         },
