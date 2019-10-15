@@ -26,12 +26,6 @@ export default {
         return {
             skillsList: json
         }
-    },
-    mounted: function() {
-
-    },
-    methods: {
-
     }
 }
 </script>

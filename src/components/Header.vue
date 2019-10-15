@@ -35,16 +35,6 @@ export default {
             baseUrl: process.env.VUE_APP_BASE_URL,
             publicPath: process.env.BASE_URL
         } 
-    },
-    mounted() {
-        // this.getSocialMediaList();
-        // console.log(this.getSocialMediaList());
-    },
-    methods: {
-        // getSocialMediaList: function() {
-        //     axios.get(this.baseUrl + 'data/social.json')
-        //         .then(response => (this.socialMediaList = response.data));
-        // }
     }
 }
 </script>

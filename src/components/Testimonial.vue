@@ -31,12 +31,6 @@ export default {
             testimonialList: json,
             publicPath: process.env.BASE_URL
         }
-    },
-    mounted() {
-
-    },
-    methods: {
-
     }
 }
 </script>

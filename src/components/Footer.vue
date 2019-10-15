@@ -30,14 +30,6 @@ export default {
         return {
             socialList: json
         }
-    },
-    mounted: function() {
-        this.currentDate();
-    },
-    methods: {
-        currentDate: function() {
-            return new Date().getFullYear()
-        }
     }
 }
 </script>
