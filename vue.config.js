@@ -7,7 +7,8 @@ module.exports = {
         fonts: [
           { family: "Playfair Display", variants: ["400", "700"] },
           { family: "Open Sans", variants: ["300", "400", "600", "700"] }
-        ]
+        ],
+        formats: ["woff2"]
       })
     ]
   }
