@@ -30,20 +30,10 @@
                 publicPath: process.env.BASE_URL
             }
         },
-        mounted: function() {
-            // this.getNavigation();
-            // var scroll = new smoothScroll('a[href*="#"]');
-        },
         created: function() {
             /* eslint-disable no-unused-vars */
             var scroll = new smoothScroll('a[href*="#"]');
             /* eslint-enable no-unused-vars */
-        },
-        methods: {
-            // getNavigation: function() {
-            //     axios.get(this.baseUrl + 'data/navigation.json')
-            //         .then(response => (this.navigationList = response.data));
-            // }
         }
     }
 </script>

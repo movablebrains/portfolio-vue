@@ -32,12 +32,6 @@ export default {
         return {
             experienceList: json
         }
-    },
-    mounted: function() {
-
-    },
-    methods: {
-
     }
 }
 </script>

@@ -36,7 +36,6 @@ export default {
             programmingList: json,
             publicPath: process.env.BASE_URL
         }
-    },
-
+    }
 }
 </script>
