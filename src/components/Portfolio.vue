@@ -9,7 +9,6 @@
             <ul class="u-portfolio-controls text-center mb-5">
                 <li class="u-portfolio-controls__item"><a class="filter" data-filter="all">All</a></li>
                 <li class="u-portfolio-controls__item"><a class="filter" data-filter=".wordpress">PSD to WordPress</a></li>
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter=".html">PSD to HTML</a></li>
                 <li class="u-portfolio-controls__item"><a class="filter" data-filter=".woocommerce">PSD to WooCommerce</a></li>
                 <li class="u-portfolio-controls__item"><a class="filter" data-filter=".design">Web Design</a></li>
                 <li class="u-portfolio-controls__item"><a class="filter" data-filter=".plugin">WordPress Plugins</a></li>
