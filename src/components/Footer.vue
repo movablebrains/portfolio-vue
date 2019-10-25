@@ -4,7 +4,7 @@
             <b-row>
                 <b-col md="8" class="text-center text-md-left mb-3 mb-md-0">
                         <small class="text-white">
-                        &copy; {{new Date().getFullYear()}} Rotsen Acob. All Rights Reserved.
+                        &copy; {{ copyrightYear }} Rotsen Acob. All Rights Reserved.
                         </small>
                 </b-col>
                 <b-col md="4" class="align-self-center">
@@ -28,7 +28,8 @@ export default {
     name: "Footer",
     data() {
         return {
-            socialList: json
+            socialList: json,
+            copyrightYear: new Date().getFullYear()
         }
     }
 }
