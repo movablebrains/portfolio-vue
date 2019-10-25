@@ -4,8 +4,8 @@
             <b-navbar-brand :href="`${publicPath}`"><img :src="`${publicPath}images/logo.svg`" alt="Rotsen Mark Acob" width="50"></b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav class="ml-auto mt-2 mt-lg-0">
-                    <b-nav-item class="mr-4 mb-2 mb-lg-0" v-for="navigation in navigationList" :key="navigation.title" :href="navigation.href">{{ navigation.title }}</b-nav-item>
+                <b-navbar-nav class="ml-auto mt-2 mt-lg-0" v-b-scrollspy>
+                    <b-nav-item @click="activate(index)" class="mr-4 mb-2 mb-lg-0" :class="{ active: active_el != '' }" v-for="(navigation, index) in navigationList" :key="index" :href="navigation.href">{{ navigation.title }}</b-nav-item>
                 </b-navbar-nav>
                 <div>
                     <a class="btn btn-primary" href="#js-scroll-to-contact">
@@ -27,13 +27,18 @@
         data() {
             return {
                 navigationList: json,
-                publicPath: process.env.BASE_URL
+                publicPath: process.env.BASE_URL,
+                active_el: 0
             }
         },
         created: function() {
             /* eslint-disable no-unused-vars */
             var scroll = new smoothScroll('a[href*="#"]');
-            /* eslint-enable no-unused-vars */
+        },
+        methods: {
+            activate: function(el) {
+                this.active_el = el;
+            }
         }
     }
 </script>
