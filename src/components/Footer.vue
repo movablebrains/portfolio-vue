@@ -22,13 +22,21 @@
 </template>
 
 <script>
-import json from '../data/social.json'
+// import json from '../data/social.json'
 
 export default {
     name: "Footer",
     data() {
         return {
-            socialList: json
+            socialList: []
+        }
+    },
+    async mounted() {
+        try {
+            const res = this.$axios.get("/social")
+            this.socialList = res.data
+        } catch(e) {
+            console.log(e)
         }
     }
 }

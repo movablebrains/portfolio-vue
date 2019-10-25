@@ -24,13 +24,21 @@
 </template>
 
 <script>
-import json from '../data/experience.json'
+// import json from '../data/experience.json'
 
 export default {
     name: "Experience",
     data() {
         return {
-            experienceList: json
+            experienceList: []
+        }
+    },
+    async mounted() {
+        try {
+            const res = await this.$axios.get("/experience")
+            this.experienceList = res.data
+        } catch(e) {
+            console.log(e)
         }
     }
 }

@@ -27,14 +27,22 @@
 </template>
 
 <script>
-import json from '../data/programming.json'
+// import json from '../data/programming.json'
 
 export default {
     name: "About",
     data() {
         return {
-            programmingList: json,
+            programmingList: [],
             publicPath: process.env.BASE_URL
+        }
+    },
+    async mounted() {
+        try {
+            const res = await this.$axios.get("/programming")
+            this.programmingList = res.data
+        } catch(e) {
+            console.log(e)
         }
     }
 }

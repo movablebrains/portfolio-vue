@@ -19,15 +19,23 @@
 
 <script>
     // import axios from 'axios';
-    import json from '../data/navigation.json'
+    // import json from '../data/navigation.json'
     import smoothScroll from 'smooth-scroll'
 
     export default {
         name: "Navigation",
         data() {
             return {
-                navigationList: json,
+                navigationList: [],
                 publicPath: process.env.BASE_URL
+            }
+        },
+        async mounted() {
+            try {
+                const res = await this.$axios.get("/navigation")
+                this.navigationList = res.data
+            } catch (error) {
+                console.log(error)
             }
         },
         created: function() {

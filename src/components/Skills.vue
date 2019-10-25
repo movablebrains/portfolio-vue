@@ -18,13 +18,21 @@
 </template>
 
 <script>
-import json from '../data/skills.json'
+// import json from '../data/skills.json'
 
 export default {
     name: "Skills",
     data() {
         return {
-            skillsList: json
+            skillsList: []
+        }
+    },
+    async mounted() {
+        try {
+            const res = await this.$axios.get("/skills")
+            this.skillsList = res.data
+        } catch (error) {
+            console.log(error)
         }
     }
 }
