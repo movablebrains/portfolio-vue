@@ -15,11 +15,13 @@
                         <p class="h5">I'm a web developer with over seven years experience working on various digital web agencies. I'm skilled in Jekyll, WordPress, JavaScript, Git, the Command Line(CLI) and can work on multiple platforms(Windows, MacOS, Linux).</p>
                     </header>
                     
-                    <!-- <ul class="programming-languages list-inline text-center d-none d-md-block">
-                        <li v-for="Programming in programmingList" :key="Programming.name" class="list-inline-item fa-5x ml-3 mr-3 ml-md-2 mr-md-2">
-                            <font-awesome-icon :icon="['fab', `${Programming.icon}`]"></font-awesome-icon>
+                    <ul class="programming-languages list-inline text-center d-none d-md-block">
+                        <li v-for="Programming in programmingList" :key="Programming.name" class="list-inline-item ml-3 mr-3 ml-md-2 mr-md-2">
+                            <b-button variant="primary" class="programming-icon">
+                                <font-awesome-icon :icon="['fab', `${Programming.icon}`]" size="2x" fixed-width></font-awesome-icon>
+                            </b-button>
                         </li>
-                    </ul> -->
+                    </ul>
                 </b-col>
             </b-row>
         </b-container>
