@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the VueJS version of the previous design of my [personal website](https://webdevsuperfast.netlify.com/) which is based on Jekyll and Stream UI.
+This is the VueJS version of the previous design of my [personal website](https://webdevsuperfast.netlify.com/) which is based on Jekyll and Stream UI. It pulls data from [Heroku](https://heroku.com) using a fake REST API built using [json-server](https://github.com/typicode/json-server).
 
 ## Building from Source
 
