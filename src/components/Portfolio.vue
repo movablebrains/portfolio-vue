@@ -21,11 +21,14 @@
                         <small class="d-block">
                             <template v-if="Array.isArray(portfolio.category)">
                                 <template v-for="(category, index) in portfolio.category">
-                                    {{ category == 'wordpress' ? 'WordPress' : category | uppercase(true) }}<template v-if="index != (portfolio.category.length - 1)">, </template>
+                                    {{ category == 'wordpress' ? 'WordPress' : category == 'woocommerce' ? 'WooCommerce' : category | uppercase(true) }}<template v-if="index != (portfolio.category.length - 1)">, </template>
                                 </template>
                             </template>
                             <template v-else-if="portfolio.category == 'wordpress'">
                                 WordPress
+                            </template>
+                            <template v-else-if="portfolio.category == 'woocomerce'">
+                                WooCommerce
                             </template>
                             <template v-else-if="portfolio.category == 'html'">
                                 HTML
