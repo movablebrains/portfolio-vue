@@ -72,7 +72,7 @@ export default {
             }
         }
     },
-    async mounted() {
+    mounted() {
         /* eslint-disable no-unused-vars */
         var containerEl = document.querySelector('.collections');
         var mixer = mixitup(containerEl, {
@@ -106,13 +106,18 @@ export default {
                 }
             });
         });
-        try {
-            const res = await this.$axios.get("/portfolio")
-            this.portfolioList = res.data
-        } catch (error) {
-            console.log(error)            
-        }
         /* eslint-enable no-unused-vars */
+        this.loadPortfolio()
+    },
+    methods: {
+        loadPortfolio: async function() {
+            try {
+                const res = await this.$axios.get("/portfolio")
+                this.portfolioList = res.data
+            } catch (error) {
+                console.log(error)            
+            }
+        }
     }
 }
 </script>
