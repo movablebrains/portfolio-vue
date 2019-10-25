@@ -5,17 +5,17 @@
                 <h2 class="h1">Let's Talk</h2>
                 <p class="h5">Thanks for dropping by. Send me an information about your project so I can determine how can I help you.</p>
             </header>
-            <form name="contact-form" class="text-center w-md-75 mx-auto" method="post" data-netlify-honeypot="bot-field" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact-form">
+            <form name="contact" class="text-center w-md-75 mx-auto" method="post" action="" netlify>
+                <input type="hidden" name="form-name" value="contact" />
                 <b-row>
                     <b-col lg="6" class="form-group mb-4">
-                        <input type="text" class="form-control" placeholder="Full Name" name="fullname" v-model="form.fullname">
+                        <input type="text" class="form-control" placeholder="Full Name" name="fullname">
                     </b-col>
                     <b-col lg="6" class="form-group mb-4">
-                        <input type="email" class="form-control" placeholder="Email Address" name="email" v-model="form.email">
+                        <input type="email" class="form-control" placeholder="Email Address" name="email">
                     </b-col>
                     <b-col lg="12" class="form-group mb-4">
-                        <textarea name="message" cols="80" rows="4" class="form-control form-control-lg" placeholder="Your Message" v-model="form.message"></textarea>
+                        <textarea name="message" cols="80" rows="4" class="form-control form-control-lg" placeholder="Your Message"></textarea>
                     </b-col>
                     <b-col lg="12" class="form-group mb-4">
                         <div data-netlify-recaptcha="true"></div>
@@ -31,33 +31,6 @@
 
 <script>
 export default {
-    name: "Contact",
-    data() {
-        return {
-            form: {
-                fullname: '',
-                email: '',
-                message: ''
-            }
-        }
-    },
-    methods: {
-        encode(data) {
-            return Object.keys(data)
-                .map(
-                    key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-                )
-                .join('&')
-        },
-        handleSubmit() {
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: this.encode({ 'form-name': 'contact-form', ...this.form })
-            })
-                .then(() => console.log("Success!"))
-                .catch(error => console.log(error) )
-        }
-    }
+    name: "Contact"
 }
 </script>
