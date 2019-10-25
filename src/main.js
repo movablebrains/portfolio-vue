@@ -23,14 +23,14 @@ import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faWordpress, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faWordpress, faLinkedin, faGithub, faNodeJs, faHtml5, faCss3Alt, faJsSquare, faSass, faGulp, faNpm, faGitAlt } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { dom } from '@fortawesome/fontawesome-svg-core'
 
 dom.watch()
 
-library.add(faGithub, faWordpress, faLinkedin, faEnvelope)
+library.add(faGithub, faWordpress, faLinkedin, faEnvelope, faNodeJs, faHtml5, faCss3Alt, faJsSquare, faSass, faGulp, faNpm, faGitAlt)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // Axios
