@@ -5,7 +5,7 @@
                 <h2 class="h1">Let's Talk</h2>
                 <p class="h5">Thanks for dropping by. Send me an information about your project so I can determine how can I help you.</p>
             </header>
-            <form name="contact" class="text-center w-md-75 mx-auto" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+            <form name="contact-form" class="text-center w-md-75 mx-auto" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify>
                 <b-row>
                     <b-col lg="6" class="form-group mb-4">
                         <input type="text" class="form-control" placeholder="Full Name" name="fullname">
