@@ -33,6 +33,13 @@ dom.watch()
 library.add(faGithub, faWordpress, faLinkedin, faEnvelope)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+// Axios
+import axios from "axios"
+
+Vue.prototype.$axios = axios.create({
+  baseURL: "https://portfolio-wds-data.herokuapp.com"
+})
+
 import '../jquery-global'
 import '../node_modules/popper.js/dist/umd/popper'
 import '../node_modules/stream/assets/vendors/bootstrap/js/bootstrap'

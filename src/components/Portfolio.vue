@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import json from '../data/portfolio.json'
+// import json from '../data/portfolio.json'
 import mixitup from 'mixitup'
 /* eslint-disable no-unused-vars */
 import magnificPopup from 'magnific-popup'
@@ -53,7 +53,7 @@ export default {
     name: "Portfolio",
     data() {
         return {
-            portfolioList: json,
+            portfolioList: [],
             publicPath: process.env.BASE_URL
         }
     },
@@ -72,7 +72,7 @@ export default {
             }
         }
     },
-    mounted() {
+    async mounted() {
         /* eslint-disable no-unused-vars */
         var containerEl = document.querySelector('.collections');
         var mixer = mixitup(containerEl, {
@@ -106,6 +106,12 @@ export default {
                 }
             });
         });
+        try {
+            const res = await this.$axios.get("/portfolio")
+            this.portfolioList = res.data
+        } catch (error) {
+            console.log(error)            
+        }
         /* eslint-enable no-unused-vars */
     }
 }
