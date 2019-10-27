@@ -22,14 +22,25 @@
 </template>
 
 <script>
-import json from '../data/social.json'
-
 export default {
     name: "Footer",
     data() {
         return {
-            socialList: json,
+            socialList: [],
             copyrightYear: new Date().getFullYear()
+        }
+    },
+    mounted() {
+        this.social()
+    },
+    methods: {
+        social: async function() {
+            try {
+                const res = await this.$axios.get('/social')
+                this.socialList = res.data
+            } catch (e) {
+                console.log(e)                
+            }
         }
     }
 }

@@ -18,15 +18,13 @@
 </template>
 
 <script>
-    // import axios from 'axios';
-    import json from '../data/navigation.json'
     import smoothScroll from 'smooth-scroll'
 
     export default {
         name: "Navigation",
         data() {
             return {
-                navigationList: json,
+                navigationList: [],
                 publicPath: process.env.BASE_URL,
                 active_el: 0
             }
@@ -35,9 +33,20 @@
             /* eslint-disable no-unused-vars */
             var scroll = new smoothScroll('a[href*="#"]');
         },
+        mounted: function() {
+            this.loadNavigation()
+        },
         methods: {
             activate: function(el) {
                 this.active_el = el;
+            },
+            loadNavigation: async function() {
+                try {
+                    const res = await this.$axios.get('/navigation')
+                    this.navigationList = res.data
+                } catch (e) {
+                    console.log(e)                    
+                }
             }
         }
     }

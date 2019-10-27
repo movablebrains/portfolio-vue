@@ -22,14 +22,25 @@
 </template>
 
 <script>
-import json from '../data/testimonials.json'
-
 export default {
     name: "Testimonial",
     data() {
         return {
-            testimonialList: json,
+            testimonialList: [],
             publicPath: process.env.BASE_URL
+        }
+    },
+    mounted() {
+        this.testimonial()
+    },
+    methods: {
+        testimonial: async function() {
+            try {
+                const res = await this.$axios.get('/testimonials')
+                this.testimonialList = res.data
+            } catch (e) {
+                console.log(e)
+            }
         }
     }
 }

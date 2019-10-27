@@ -24,17 +24,27 @@
 </template>
 
 <script>
-// import axios from 'axios'
-import json from '../data/social.json'
-
 export default {
     name: "Header",
     data() {
         return {
-            socialMediaList: json,
+            socialMediaList: [],
             baseUrl: process.env.VUE_APP_BASE_URL,
             publicPath: process.env.BASE_URL
         } 
+    },
+    mounted() {
+        this.social()
+    },
+    methods: {
+        social: async function() {
+            try {
+                const res = await this.$axios.get('/social')
+                this.socialMediaList = res.data
+            } catch (e) {
+                console.log(e)                
+            }
+        }
     }
 }
 </script>
