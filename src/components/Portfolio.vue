@@ -7,14 +7,14 @@
             </header>
 
             <ul class="u-portfolio-controls text-center mb-5">
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter="all">All</a></li>
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter=".wordpress">PSD to WordPress</a></li>
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter=".woocommerce">PSD to WooCommerce</a></li>
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter=".design">Web Design</a></li>
-                <li class="u-portfolio-controls__item"><a class="filter" data-filter=".plugin">WordPress Plugins</a></li>
+                <li class="u-portfolio-controls__item"><a class="filter" @click="filter('all')">All</a></li>
+                <li class="u-portfolio-controls__item"><a class="filter" @click="filter('wordpress')">PSD to WordPress</a></li>
+                <li class="u-portfolio-controls__item"><a class="filter" @click="filter('woocommerce')">PSD to WooCommerce</a></li>
+                <li class="u-portfolio-controls__item"><a class="filter" @click="filter('design')">Web Design</a></li>
+                <li class="u-portfolio-controls__item"><a class="filter" @click="filter('plugin')">WordPress Plugins</a></li>
             </ul>
-            <b-row class="collections gallery u-portfolio no-gutters mb-6">
-                <figure v-for="(portfolio, index) in portfolioList" :key="index" :class="['mix col-sm-6 col-md-4 u-portfolio__item', `${Array.isArray(portfolio.category) ? portfolio.category.join(' ') : portfolio.category}`]">
+            <transition-group name="list-complete" class="list-complete row no-gutters mb-6 gallery u-portfolio" tag="section">
+                <figure v-for="portfolio in listItems" :key="portfolio.title" :class="['mix col-sm-6 col-md-4 u-portfolio__item list-complete-item', `${Array.isArray(portfolio.category) ? portfolio.category.join(' ') : portfolio.category}`]">
                     <img class="u-portfolio__image lazyload" :data-src="`${publicPath}images/thumbs/${portfolio.thumbnail}`" :alt="`${portfolio.title}`">
                     <figcaption class="u-portfolio__info">
                         <h6 class="mb-0">{{ portfolio.title }}</h6>
@@ -40,14 +40,13 @@
                     </figcaption>
                     <a class="u-portfolio__zoom" :href="`${publicPath}images/${portfolio.image}`" :title="`${ portfolio.title }`" :data-url="`${ portfolio.website }`">Zoom</a>
                 </figure>
-            </b-row>
+            </transition-group>
         </b-container>
     </section>
 </template>
 
 <script>
-import json from '../data/portfolio.json'
-import mixitup from 'mixitup'
+import _ from 'lodash'
 /* eslint-disable no-unused-vars */
 import magnificPopup from 'magnific-popup'
 /* eslint-enable no-unused-vars */
@@ -56,8 +55,9 @@ export default {
     name: "Portfolio",
     data() {
         return {
-            portfolioList: json,
-            publicPath: process.env.BASE_URL
+            portfolioList: [],
+            publicPath: process.env.BASE_URL,
+            initialFilter: 'all'
         }
     },
     filters: {
@@ -75,16 +75,12 @@ export default {
             }
         }
     },
+    created() {
+        this.listPortfolio()
+    },
     mounted() {
-        /* eslint-disable no-unused-vars */
-        var containerEl = document.querySelector('.collections');
-        var mixer = mixitup(containerEl, {
-            callbacks: {
-                onMixStart: function(state,futureState){
-                }
-            }
-        });
 
+        /* eslint-disable no-unused-vars */
         // Magnific Popup
         $(document).ready(function(){
             $('.gallery').magnificPopup({
@@ -110,6 +106,44 @@ export default {
             });
         });
         /* eslint-enable no-unused-vars */
+    },
+    computed: {
+        listItems: function() {
+            var filter = this.initialFilter
+            if (filter != 'all' ) {
+                return this.portfolioList.filter(function(item){
+                    return item.category.indexOf(filter) !== -1
+                })
+            } else {
+                return this.portfolioList
+            }
+        }
+    },
+    methods: {
+        listPortfolio: async function() {
+            const res = await this.$axios.get('/portfolio')
+            this.portfolioList = res.data
+        },
+        shuffle: function() {
+            /* eslint-disable no-unused-vars */
+            this.portfolioList = _.shuffle(this.portfolioList)
+            /* eslint-enable no-unused-vars */
+        },
+        filter: function(tag) {
+            this.initialFilter = tag
+        }
     }
 }
 </script>
+<style lang="scss" scoped>
+    .list-complete-item {
+        transition: transform 1s;
+    }
+    .list-complete-enter, .list-complete-leave-to  {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    .list-complete-leave-active {
+        position: absolute;
+    }
+</style>
