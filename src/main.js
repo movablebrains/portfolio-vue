@@ -42,6 +42,11 @@ require('./assets/js/custom.js')
 
 import './assets/scss/style.scss';
 
+import axios from 'axios'
+
+Vue.prototype.$axios = axios.create({
+  baseURL: 'http://localhost:3000'
+})
 Vue.config.productionTip = false
 
 new Vue({
