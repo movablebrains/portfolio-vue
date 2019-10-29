@@ -7,13 +7,16 @@
                         <h1 class="display-sm-4 display-lg-3">Rotsen Mark Acob</h1>
                         <p class="h6 text-uppercase u-letter-spacing-sm mb-2">Web Developer</p>
                         <ul class="list-inline text-center mb-0">
-                            <li v-for="socialMedia in socialMediaList" :key="socialMedia.id" class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" :title="socialMedia.title">
-                                <b-link :href="socialMedia.url" class="text-white" v-if="socialMedia.icon == 'envelope'">
+                            <li v-for="socialMedia in socialMediaList" :key="socialMedia.id" class="list-inline-item mx-2">
+                                <b-link :id="socialMedia.icon" :href="socialMedia.url" class="text-white" v-if="socialMedia.icon == 'envelope'">
                                     <font-awesome-icon :icon="['fas', `${socialMedia.icon}`]"></font-awesome-icon>
                                 </b-link>
-                                <b-link :href="socialMedia.url" class="text-white" v-else>
+                                <b-link :id="socialMedia.icon" :href="socialMedia.url" class="text-white" v-else>
                                     <font-awesome-icon :icon="['fab', `${socialMedia.icon}`]"></font-awesome-icon>
                                 </b-link>
+                                <b-tooltip :target="socialMedia.icon" triggers="hover">
+                                    {{ socialMedia.title }}
+                                </b-tooltip>
                             </li>
                         </ul>
                     </div>
