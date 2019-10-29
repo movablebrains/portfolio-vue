@@ -1,11 +1,20 @@
+// Stream UI Bootstrap Overrides
 @import "../../../node_modules/stream/assets/include/scss/tools/functions";
 @import "../../../node_modules/stream/assets/include/scss/variables";
 @import "../../../node_modules/stream/assets/include/scss/tools/mixins";
 @import '../../../node_modules/stream/assets/include/scss/vendors/bootstrap/custom.bootstrap.variables';
 
+// Bootstrap SCSS
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
+// Bootstrap Vue SCSS
 @import '../../../node_modules/bootstrap-vue/src/index';
+
+// Stream UI SCSS
+@import "../../../node_modules/stream/assets/include/scss/vendors/bootstrap/width";
+@import "../../../node_modules/stream/assets/include/scss/vendors/bootstrap/text";
+@import "../../../node_modules/stream/assets/include/scss/vendors/bootstrap/heading";
+@import "../../../node_modules/stream/assets/include/scss/vendors/bootstrap/dropdown";
 
 // Core
 @import "../../../node_modules/stream/assets/include/scss/core";
