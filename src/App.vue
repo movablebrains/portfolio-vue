@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navigation />
+    <Navigation v-if="this.$route.path == '/'" />
     <router-view />
-    <Footer />
+    <Footer v-if="this.$route.path == '/'" />
   </div>
 </template>
 
