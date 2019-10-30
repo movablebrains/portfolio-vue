@@ -41,7 +41,7 @@ import '../node_modules/popper.js/dist/umd/popper'
 import '../node_modules/stream/assets/vendors/bootstrap/js/bootstrap'
 import '../node_modules/stream/assets/vendors/jquery.parallax'
 import '../node_modules/stream/assets/js/vendors/parallax'
-import './assets/js/custom.js'
+// import './assets/js/custom.js'
 
 import './assets/scss/style.scss';
 
