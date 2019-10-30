@@ -12,7 +12,7 @@
                     <b-col lg="6" class="form-group mb-4">
                         <b-form-input v-model.trim="$v.form.name.$model" type="text" class="form-control" placeholder="Full Name" name="name" aria-describedby="name-live-feedback" :state="$v.form.name.$dirty ? !$v.form.name.$error : null"></b-form-input>
                         <b-form-invalid-feedback id="name-live-feedback">
-                            Field is required and name must have at least {{ $v.form.name.$params.minLength.min }}
+                            Field is required and name must have at least {{ $v.form.name.$params.minLength.min }} characters.
                         </b-form-invalid-feedback>
                     </b-col>
                     <b-col lg="6" class="form-group mb-4">
@@ -25,11 +25,13 @@
                         <b-form-textarea v-model.trim="$v.form.message.$model" name="message" cols="80" rows="4" class="form-control form-control-lg" placeholder="Your Message" aria-describedby="message-live-feedback" :state="$v.form.message.$dirty ? !$v.form.message.$error : null"></b-form-textarea>
                         <b-form-invalid-feedback id="message-live-feedback">Field is required</b-form-invalid-feedback>
                     </b-col>
-                    <b-col lg="12" class="text-center">
+                    <b-col lg="12" class="text-center mb-4">
                         <b-button type="submit" class="btn btn-lg btn-primary py-3 px-4" :disabled="submitStatus === 'PENDING'">Send Message</b-button>
-                        <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
-                        <p class="typo__p" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
-                        <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
+                    </b-col>
+                    <b-col lg="12" class="text-center">
+                        <b-alert :show="submitStatus === 'OK'" variant="success">Thanks for your submission!</b-alert>
+                        <b-alert :show="submitStatus === 'ERROR'" variant="danger">Please fill the form correctly.</b-alert>
+                        <b-alert :show="submitStatus === 'PENDING'" variant="info">Sending...</b-alert>
                     </b-col>
                 </b-row>
             </b-form>
@@ -78,7 +80,6 @@ export default {
                 .join('&')
         },
         handleSubmit: function() {
-            console.log('submit!')
             this.$v.form.$touch()
             if (this.$v.$invalid) {
                 this.submitStatus = 'ERROR'
