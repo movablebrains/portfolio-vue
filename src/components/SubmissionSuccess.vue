@@ -17,6 +17,9 @@
 <script>
 export default {
   name: 'SubmissionSuccess',
+  metaInfo: {
+    title: 'Thank You'
+  },
   data() {
     return {
       publicPath: process.env.BASE_URL
