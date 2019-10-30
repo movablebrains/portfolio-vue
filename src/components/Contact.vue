@@ -56,8 +56,12 @@ export default {
                     ...this.form
                 })
             })
-                .then(() => console.log('Successfully sent'))
-                .catch(error => console.log(error))
+                .then(() => {
+                    this.$router.push('thanks')
+                })
+                .catch(() => {
+                    this.router.push('404')
+                })
         }
     }
 }
