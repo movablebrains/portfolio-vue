@@ -15,10 +15,6 @@ import 'lazysizes'
 
 export default {
   name: 'app',
-  metaInfo: {
-    title: 'Rotsen Acob',
-    titleTemplate: '%s - Web Developer'
-  },
   data() {
     return {
     }
