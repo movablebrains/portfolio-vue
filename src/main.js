@@ -8,6 +8,8 @@ Vue.use(VueMeta, {
 
 import Home from '@/views/Home.vue'
 import NotFound from '@/views/404.vue'
+import FormSuccess from '@/components/SubmissionSuccess.vue'
+
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -15,10 +17,21 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: "history",
   routes: [
-    { path: '/', name: 'home', component: Home },
-    // { path: '/404', component: NotFound },
-    { path: '/404', alias: '*', component: NotFound },
-    // { path: '*', redirect: '/404' }
+    { 
+      path: '/', 
+      name: 'home', 
+      component: Home 
+    },
+    { 
+      path: '/404', 
+      alias: '*', 
+      component: NotFound 
+    },
+    {
+      path: '/thanks',
+      name: 'thanks',
+      component: FormSuccess
+    }
   ]
 })
 
