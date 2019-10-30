@@ -10,26 +10,20 @@
 
                 <b-row>
                     <b-col lg="6" class="form-group mb-4">
-                        <b-form-input v-model.trim="$v.form.name.$model" type="text" class="form-control" placeholder="Full Name" name="name"></b-form-input>
-                        <b-form-invalid-feedback v-if="!$v.form.name.required">
-                            Field is required
-                        </b-form-invalid-feedback>
-                        <b-form-invalid-feedback v-if="!$v.form.name.minLength">
-                            Name must have at least {{ $v.form.name.$params.minLength.min }}
+                        <b-form-input v-model.trim="$v.form.name.$model" type="text" class="form-control" placeholder="Full Name" name="name" aria-describedby="name-live-feedback" :state="$v.form.name.$dirty ? !$v.form.name.$error : null"></b-form-input>
+                        <b-form-invalid-feedback id="name-live-feedback">
+                            Field is required and name must have at least {{ $v.form.name.$params.minLength.min }}
                         </b-form-invalid-feedback>
                     </b-col>
                     <b-col lg="6" class="form-group mb-4">
-                        <b-form-input v-model.trim="$v.form.email.$model" type="email" class="form-control" placeholder="Email Address" name="email"></b-form-input>
-                        <b-form-invalid-feedback v-if="!$v.form.email.required">
-                            Field is required
-                        </b-form-invalid-feedback>
-                        <b-form-invalid-feedback v-if="!$v.form.email.email">
-                            Email must be a valid email
+                        <b-form-input v-model.trim="$v.form.email.$model" type="email" class="form-control" placeholder="Email Address" name="email" aria-describedby="email-live-feedback" :state="$v.form.email.$dirty ? !$v.form.email.$error : null"></b-form-input>
+                        <b-form-invalid-feedback id="email-live-feedback">
+                            Field is required and email must be a valid email.
                         </b-form-invalid-feedback>
                     </b-col>
                     <b-col lg="12" class="form-group mb-4">
-                        <b-form-textarea v-model.trim="$v.form.message.$model" name="message" cols="80" rows="4" class="form-control form-control-lg" placeholder="Your Message"></b-form-textarea>
-                        <b-form-invalid-feedback v-if="!$v.form.message.required">Field is required</b-form-invalid-feedback>
+                        <b-form-textarea v-model.trim="$v.form.message.$model" name="message" cols="80" rows="4" class="form-control form-control-lg" placeholder="Your Message" aria-describedby="message-live-feedback" :state="$v.form.message.$dirty ? !$v.form.message.$error : null"></b-form-textarea>
+                        <b-form-invalid-feedback id="message-live-feedback">Field is required</b-form-invalid-feedback>
                     </b-col>
                     <b-col lg="12" class="text-center">
                         <b-button type="submit" class="btn btn-lg btn-primary py-3 px-4" :disabled="submitStatus === 'PENDING'">Send Message</b-button>
