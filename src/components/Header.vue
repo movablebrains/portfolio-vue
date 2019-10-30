@@ -1,5 +1,5 @@
 <template>
-    <b-jumbotron class="js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white lazyload" :style="`background-image:url(${publicPath}images/carlos-muza-84523-unsplash.jpg)`">
+    <b-jumbotron class="mb-0 js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white lazyload" :style="`background-image:url(${publicPath}images/carlos-muza-84523-unsplash.jpg)`">
         <b-container class="u-overlay__inner u-ver-center u-content-space">
             <b-row class="justify-content-center">
                 <b-col cols="12" >
