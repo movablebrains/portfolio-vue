@@ -27,21 +27,45 @@
         data() {
             return {
                 navigationList: [],
-                publicPath: process.env.BASE_URL
-            }
-        },
-        async mounted() {
-            try {
-                const res = await this.$axios.get("/navigation")
-                this.navigationList = res.data
-            } catch (error) {
-                console.log(error)
+                publicPath: process.env.BASE_URL,
+                active_el: 0,
+                scrollPosition: null
             }
         },
         created: function() {
             /* eslint-disable no-unused-vars */
-            var scroll = new smoothScroll('a[href*="#"]');
-            /* eslint-enable no-unused-vars */
+            var scroll = new smoothScroll('a[href*="#"]')
+        },
+        mounted: function() {
+            this.loadNavigation()
+            window.addEventListener('scroll', this.updateScroll)
+        },
+        destroy() {
+            window.removeEventListener('scroll', this.updateScroll)
+        },
+        methods: {
+            activate: function(el) {
+                this.active_el = el;
+            },
+            loadNavigation: async function() {
+                try {
+                    const res = await this.$axios.get('/navigation')
+                    this.navigationList = res.data
+                } catch (e) {
+                    console.log(e)                    
+                }
+            },
+            updateScroll: function() {
+                this.scrollPosition = window.scrollY
+                const navHeader = document.querySelector('.navbar')
+
+                if (window.scrollY > 100) {
+                    navHeader.classList.add('navbar-bg-onscroll')
+                } else if (window.scrollY < 100 ) {
+                    navHeader.classList.remove('navbar-bg-onscroll')
+                    navHeader.classList.add('navbar-bg-onscroll--fade')
+                }
+            }
         }
     }
 </script>
