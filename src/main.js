@@ -16,9 +16,9 @@ const router = new VueRouter({
   mode: "history",
   routes: [
     { path: '/', name: 'home', component: Home },
-    { path: '/404', component: NotFound },
-    // { path: '/404', alias: '*', component: NotFound },
-    { path: '*', redirect: '/404' }
+    // { path: '/404', component: NotFound },
+    { path: '/404', alias: '*', component: NotFound },
+    // { path: '*', redirect: '/404' }
   ]
 })
 
