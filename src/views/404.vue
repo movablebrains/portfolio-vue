@@ -8,12 +8,7 @@
 import NotFound from '@/components/404.vue'
 
 export default {
-  name: '404',
-  data() {
-    return {
-
-    }
-  },
+  name: 'not-found',
   components: {
     NotFound
   }
