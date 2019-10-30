@@ -26,7 +26,8 @@
     "stream": "htmlstreamofficial/stream-ui-kit",
     "vue": "^2.6.10",
     "vue-meta": "^2.3.1",
-    "vue-router": "^3.1.3"
+    "vue-router": "^3.1.3",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.5",
