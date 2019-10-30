@@ -23,6 +23,10 @@ import Border from '@/components/Border.vue'
 
 export default {
   name: 'home',
+  metaInfo: {
+    title: 'Rotsen Acob',
+    titleTemplate: '%s - Web Developer'
+  },
   components: {
     Header,
     About,
