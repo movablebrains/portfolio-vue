@@ -41,7 +41,9 @@ export default {
   },
   created: function() {
     /* eslint-disable no-unused-vars */
-    var scroll = new smoothScroll('a[href*="#"]');
+    var scroll = new smoothScroll('a[href*="#"]', {
+      updateURL: false
+    });
   },
   mounted: function() {
     this.loadNavigation();
