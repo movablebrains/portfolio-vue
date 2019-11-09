@@ -7,21 +7,19 @@
 </template>
 
 <script>
+import Navigation from "./components/Navigation.vue";
+import Footer from "./components/Footer.vue";
 
-import Navigation from './components/Navigation.vue'
-import Footer from './components/Footer.vue'
-
-import 'lazysizes'
+import "lazysizes";
 
 export default {
-  name: 'app',
+  name: "app",
   data() {
-    return {
-    }
+    return {};
   },
   components: {
     Navigation,
     Footer
   }
-}
+};
 </script>

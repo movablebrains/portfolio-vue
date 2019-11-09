@@ -2,8 +2,8 @@
   <main id="content">
     <Header />
     <About />
-    <Border />
-    <Experience />
+    <!-- <Border /> -->
+    <!-- <Experience /> -->
     <Skills />
     <Portfolio />
     <Testimonial />
@@ -14,12 +14,12 @@
 <script>
 import Header from '@/components/Header.vue'
 import About from '@/components/About.vue'
-import Experience from '@/components/Experience.vue'
+// import Experience from '@/components/Experience.vue'
 import Skills from '@/components/Skills.vue'
 import Portfolio from '@/components/Portfolio.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import Contact from '@/components/Contact.vue'
-import Border from '@/components/Border.vue'
+// import Border from '@/components/Border.vue'
 
 export default {
   name: 'home',
@@ -30,12 +30,12 @@ export default {
   components: {
     Header,
     About,
-    Experience,
+    // Experience,
     Portfolio,
     Skills,
     Testimonial,
     Contact,
-    Border
+    // Border
   }
 }
 </script>
