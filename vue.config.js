@@ -1,5 +1,4 @@
-const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin')
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const GoogleFontsPlugin = require('google-fonts-plugin')
 
 module.exports = {
   configureWebpack: {
@@ -11,7 +10,6 @@ module.exports = {
         ],
         formats: ["woff2"]
       }),
-      new ImageminWebpWebpackPlugin()
     ]
   }
 }
