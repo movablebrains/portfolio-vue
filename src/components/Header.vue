@@ -1,8 +1,24 @@
 <template>
   <b-jumbotron
-    class="mb-0 js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white lazyload"
-    :style="`background-image:url(${publicPath}images/carlos-muza-84523-unsplash.jpg)`"
+    class="u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white"
   >
+    <vue-particles
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="80"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+    ></vue-particles>
     <b-container class="u-overlay__inner u-ver-center u-content-space">
       <b-row class="justify-content-center">
         <b-col cols="12">
@@ -61,3 +77,18 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+  .u-promo-block {
+    background: rgba(68, 32, 93, 1.0);
+    background: -webkit-linear-gradient(top, rgba(68, 32, 93, 1.0), rgba(255, 255, 255, 1.0));
+    background: -moz-linear-gradient(top, rgba(68, 32, 93, 1.0), rgba(255, 255, 255, 1.0));
+    background: linear-gradient(to bottom, rgba(68, 32, 93, 1.0), rgba(255, 255, 255, 1.0));
+    overflow: hidden;
+  }
+  #particles-js {
+    position: absolute;
+    canvas {
+      position: absolute;
+    }
+  }
+</style>
