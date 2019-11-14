@@ -16,6 +16,9 @@ import '@/config/fontawesome'
 // Axios
 import '@/config/http'
 
+// Particles JS
+import '@/config/particles'
+
 // Needed JS Files
 import '../jquery-global'
 import '../node_modules/popper.js/dist/umd/popper'
